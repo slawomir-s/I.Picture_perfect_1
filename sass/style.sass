@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather')
+
+$align: center
+$alignl: justify
+$align2: left
+$color: #fff
+$color1: #222626
+$color2: #959595
+$display: inline-block
+
+* 
+	box-sizing: border-box
+
+body 
+	margin: 0 auto
+	font-family: "Open Sans", sans-serif
+	overflow-x: hidden
+	padding: 15px 
+
+.row
+	&:before, 
+	&:after 
+		content: " "
+		display: table
+		clear: both
+
+.container 
+	max-width: 1200px
+	margin: 50px auto
+	width: 100% 
+
+[class*="col-"] 
+	float: $align2
+	width: 100% 
+
+@for $i from 1 through 12
+	.col-#{$i}
+		width: ($i / 12) * 100%
+
+header 
+	background: url("http://i.imgur.com/m0thGCb.jpg") fixed
+	background-size: cover
+	background-position: 60% 0
+	height: 100vh
+	margin-top: -50px
+	position: relative
+	span 
+		display: $display
+		font-family: 'Merriweather'
+		font-style: italic
+		font-size: 20px
+		font-weight: bold
+		margin: 15px 10px
+		position: absolute
+	a 
+		color: $color
+		display: $display
+		margin: 50px 0
+		text-decoration: none
+	h1
+		font-size: 60px
+		font-weight: lighter
+		margin-top: 20vh
+	h1,
+	p 
+    	color: $color
+    	max-width: 500px
+        padding: 15px
+	.circle 
+		border: 3px solid $color
+		border-radius: 50%
+		display: $display
+		height: 50px
+		position: relative
+		width: 50px
+		&:after 
+			border: 3px solid $color
+			border-radius: 50%
+			content: ""
+			height: 13px
+			left: 50%
+			position: absolute
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 13px
+		&:hover, 
+		&:active 
+			transform: scale(1.1)
+			backface-visibility: visible
+
+.iphone 
+	img 
+		height: 90vh
+		margin-top: -220px
+		position: absolute
+		right: 15vw
+
+.start 
+	line-height: 24px
+	text-align: $alignl
+	h1 
+		color: $color1
+		font-weight: lighter
+		margin-bottom: 30px
+	p 
+		color: $color2
+		font-size: 14px
+	.left h2 
+		margin-bottom: 30px
+	.right 
+		margin-top: 165px
+		padding-left: 25px
+
+.container-gallery 
+	text-align: $align2
+
+.gallery 
+	[class*="col-"] 
+		color: $color
+		height: 250px
+		padding: 20px 33px
+		position: relative
+	p 
+		padding-top: 20px
+		font-size: 13px
+	.photo1 
+		background-color: #f5989d
+	.photo2 
+		background-color: #615f7d
+	.photo3 
+		background: url("http://imgur.com/GJzldmS.jpg")
+		background-size: cover
+	.photo4 
+		background-color: #bd8cbf
+	.photo5
+		background: url("http://imgur.com/GJzldmS.jpg")
+		background-size: cover
+		padding-right: 10%
+	.photo6
+		background-color: #82ca9c
+	.photo7 
+		background: url("http://imgur.com/GJzldmS.jpg")
+		background-size: cover
+	.photo
+		&:hover, 
+		&:active 
+			transform: scale(1.05)
+			backface-visibility: visible
+		
+.findout 
+	bottom: 0
+	padding-bottom: 3vh	
+	position: absolute
+	a 
+		color: $color
+		text-decoration: none
+		font-weight: bold
+		font-size: 14px
+	i
+		margin-left: 13px		
+	&:hover, 
+	&:active 
+		text-decoration: underline
+		i
+			margin-left: 25px
+				
+.details 
+	.col-12 
+		padding-bottom: 50px
+		h2 
+			font-size: 35px
+			font-weight: lighter
+			margin-bottom: 50px
+			color: $color1
+		.col-3 
+			padding: 0 15px
+			h3 
+				font-size: 13px
+				font-weight: bold
+				color: #67676d
+				line-height: 40px
+			p 
+				color: $color2
+				font-size: 14px
+				text-align: $alignl
+
+.jumbotron 
+	background: url("http://imgur.com/Rrm9VpU.jpg") fixed
+	background-size: cover
+	background-position: 50% 0
+	height: 870px
+	padding: 0 70px
+	.description 
+		h2 
+			font-size: 60px
+			font-weight: lighter
+			margin-top: 45vh
+			margin-bottom: 15px
+		h2,
+		p,
+		a 
+			color: $color
+			max-width: 500px
+			margin-left: 250px
+		i 
+			margin-left: 15px
+		&:hover, 
+		&:active
+			transform: scale(0.9)
+			backface-visibility: visible
+
+.board 
+	background-color: #82ca9c
+	color: $color
+	margin-top: -50px	
+	padding: 20px 0
+	h2 
+		font-size: 35px
+		font-weight: lighter
+	.col-12 
+		padding: 100px 0
+		.col-4 
+			padding: 20px
+			h3 
+				font-size: 15px
+				font-weight: bold
+				line-height: 24px
+                margin-bottom: 10px
+			p 
+				font-size: 14px
+				text-align: $alignl
+			
+.shop 
+	margin: 100px 0
+	.col-6 
+		height: 400px
+		padding: 50px 0
+		&:hover, 
+		&:active 
+			box-shadow: 0 0 10px
+		p 
+			color: #8297a7
+			margin-top: 20px	
+	.box 
+		margin-left: 80px
+		max-width: 450px
+	
+	i 
+		color: #ccc
+		font-size: 14px
+		margin-top: 20px
+		margin-right: 15px
+
+.leftbox 
+	span 
+		background-color: #e1e1e1
+		width: 65px
+
+.rightbox 
+	span 
+		background-color: #bd8cbf
+		width: 110px	
+
+.tag 
+	border-radius: 10px
+	color: $color
+    display: $display
+	font-weight: bold
+    height: 25px	
+	line-height: 25px
+	text-align: $align
+    margin-bottom: 20px
+
+.buy 
+	background-color: #179579
+	border: none
+    border-radius: 15px
+    color: $color
+    display: block
+	font-weight: bolder
+	height: 50px
+    margin-top: 20px
+	width: 150px
+	color: $color
+	&:hover, 
+	&:active 
+		transform: scale(1.05)
+
+footer 
+	background-color: #192431
+	color: $color
+	padding: 110px 0px
+	position: relative
+	h3 
+		margin-bottom: 20px
+		font-size: 15px
+		font-weight: bold
+	p 
+		font-size: 13px
+		padding: 10px
+	.form 
+        p 
+            color: #57697f
+            font-size: 12px
+            padding-right: 120px
+	.form-group 
+		max-width: 570px
+		position: relative
+		input,
+		button 
+			height: 60px
+		button 
+			position: absolute
+			right: 0
+			top: 0
+		i 
+			font-size: 20px
+			margin: 0 auto
+	.form 
+		padding: 0 50px
+	ul 
+		font-size: 13px
+		list-style-type: none
+		padding: 0
+		white-space: nowrap
+	.row-list 
+		padding: 15px
+	.author
+		background: #E8930C
+		bottom: 0
+		height: 70px
+		line-height: 50px
+		position: absolute
+		text-align: $align
+		width: 100%
+		font-weight: bold
+		p 
+    		margin: 10px
+            line-height: 2
+
+@media (min-width: 768px) and (max-width: 1199px) 
+	
+    @for $i from 1 through 12
+        .col-m-#{$i}
+            width: ($i / 12) * 100%
+
+    header
+        .description
+            margin-top: 200px
+
+    .iphone
+        img 
+            height: 80vh
+            margin-top: -260px
+            right: 5vw
+      
+    .start
+        padding: 30px
+        .right
+            margin-top: 0
+            padding-left: 0
+        
+    .gallery 
+        .photo5 
+            padding-right: 10%
+    
+    .details 
+            padding: 15px
+
+    .jumbotron
+        height: 550px
+        .description
+            position: relative
+            left: -100px
+            h2
+                font-size: 50px
+                font-weight: lighter
+                margin-top: 20vh
+    
+    .board 
+        padding: 30px
+    
+    .shop 
+        margin: 60px 0
+        text-align: $align
+        .col-6
+            padding: 10px
+        .box
+            h2
+                font-weight: bold
+                margin-top: 20px  
+        .buy
+            display: $display
+            margin-top: 40px
+        .leftbox,
+        .rightbox
+            display: $display
+            margin: 20px 0
+    
+    footer 
+        text-align: $align
+        p 
+            padding: 0 50px
+        h3
+            font-weight: bold
+            font-size: 15px
+        form
+            display: $display
+        .author
+            p
+                line-height: 4
+   
+@media (max-width: 767px) 
+	
+    @for $i from 1 through 12
+        .col-s-#{$i}
+            width: ($i / 12) * 100%
+  
+    header 
+        position: relative
+        h1 
+            margin-top: 70px
+        h1,
+        p
+            text-align: $align
+    
+    .iphone 
+        img 
+            display: none
+      
+    .start
+        text-align: $align
+        padding: 0 25px
+        .right 
+            margin-top: 0
+            padding: 0
+
+    .container-gallery
+        text-align: $align2
+        p 
+            text-align: $alignl
+
+    .gallery 
+        .photo5 
+            padding-right: 35px
+	  
+    .details
+        text-align: $align
+        padding: 0 15px
+
+    .jumbotron
+        .description
+            text-align: $align
+            display: $display
+            position: relative
+            right: 250px
+            h2 
+                margin-top: 15vh
+        h2,
+        p,
+        a
+            margin: 15px 
+	
+    .board
+        padding: 0 15px
+
+    .shop
+        margin: 50px 0
+        text-align: $align
+        .col-6 
+            padding: 10px 10px
+        .box 
+            margin-left: 10px
+        .buy
+            display: $display
+        .leftbox,
+        .rightbox
+            display: inline-block
+            margin: 30px 0
+    
+    footer
+        text-align: $align
+        h3
+            font-weight: bold
+            font-size: 1.1em
+            margin-top: 15px
+        .form
+            p 
+                padding: 0
+        .author
+            p
+                margin: 10px
+                padding: 0 20px
+                line-height: 3

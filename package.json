@@ -1,0 +1,28 @@
+{
+  "name": "picture_perfect",
+  "version": "1.0.0",
+  "description": "Install grunt to project",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slawomir-s/I.Picture_perfect_1.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Slawomir S.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slawomir-s/I.Picture_perfect_1/issues"
+  },
+  "homepage": "https://github.com/slawomir-s/I.Picture_perfect_1#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
